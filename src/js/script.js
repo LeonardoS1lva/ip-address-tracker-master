@@ -19,7 +19,6 @@ async function getAPIDatas(ip) {
         timezone.innerHTML = `UTC ${result.location.timezone}`;
         isp.innerHTML = result.isp;
         showMap(result.location.lat, result.location.lng);
-        console.log(result)
     }
     catch (error) {
         alert(error);
@@ -39,7 +38,7 @@ function showMap(lat, long) {
     }
 
     var iconMarker = L.icon({
-        iconUrl: "../../images/icon-location.svg",
+        iconUrl: "./images/icon-location.svg",
     });
 
     if (typeof map.marker !== 'undefined') {

@@ -17,6 +17,7 @@ header {
     padding: 1rem;
     background-image: url(../../images/pattern-bg-desktop.png);
     background-repeat: no-repeat;
+    background-size: cover;
     object-fit: cover;
     height: 35vh;
 }

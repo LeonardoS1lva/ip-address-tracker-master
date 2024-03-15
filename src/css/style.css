@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    background-image: url(../../images/pattern-bg-desktop.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 35vh;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container img {
+    position: absolute;
+    background-color: #000;
+    /* top: 25%; */
+    right: 30%;
+    padding: 1rem;
+    border-radius: 0 1rem 1rem 0;
+    height: 100%;
+}
+
+.container img:hover {
+    cursor: pointer;
+    background-color: #000000cc;
+}
+
+.title {
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+}
+
+#input-ip {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    width: 40%;
+    outline: none;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#input-ip:hover {
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 65vh;
+}
+
+main .datas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    letter-spacing: 1px;
+    color: hsl(0, 0%, 59%);
+    background-color: #fff;
+    border-radius: 1rem;
+    border: none;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    width: 70%;
+    font-weight: 700;
+    font-size: 12px;
+    min-height: 130px;
+    max-height: max-content;
+    box-shadow: 0 10px 30px #000;
+    margin-top: -70px;
+    position: absolute;
+    z-index: 1;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+main .datas li:not(:first-child) {
+    border-left: 1px solid hsl(0, 0%, 59%);
+    padding: 0 1rem;
+}
+
+main .datas li:first-child {
+    padding-right: 1rem;
+}
+
+main .datas li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+main .datas li span {
+    color: hsl(0, 0%, 17%);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+@media (max-width:800px) {
+    #input-ip {
+        width: 100%;
+    }
+
+    .container img {
+        right: 0;
+    }
+
+    header {
+        height: 40vh;
+    }
+
+    main {
+        height: 60vh;
+    }
+
+    main .datas {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        text-align: center;
+        margin-top: -110px;
+        width: 90%;
+    }
+
+    main .datas li:not(:first-child) {
+        border-left: none;
+        padding: 0;
+    }
+
+    main .datas li:first-child {
+        padding-right: 0;
+    }
+}
